@@ -1,0 +1,47 @@
+package com.xpagesbeast.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class JUnitPlay {
+
+	//multiple test methods may exist, this code will run first.
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out.println("Executed Before any Class method");
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		//executes once 
+		System.out.println("Executed once after everything is done and before setup.  tearDownAfter Class");
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		System.out.println("Executed Before test : Setup");
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		System.out.println("Executed After test : tearDown");
+	}
+
+	@Test
+	public void test1() {
+		//write everything you want to test here.
+		fail("TEST 1: Not yet implemented");
+	}
+	
+	@Test
+	public void test2() {
+		//write everything you want to test here.
+		fail("TEST 2: Not yet implemented");
+	}
+
+}

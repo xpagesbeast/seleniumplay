@@ -1,0 +1,57 @@
+package com.xpagesbeast.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class JUnitPlay {
+
+	WebDriver driver;
+	String baseURL = "http://cbcdev.canalbarge.com/bmr/2.6/BMR_MobUI.nsf/UnpMain.xsp";
+	
+	//No main method needed.
+	
+	//multiple test methods may exist, this code will run first.
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out.println("Executed Before any Class method : setupBeforeClass");
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		//executes once 
+		System.out.println("Executed once after everything is done and before setup.  tearDownAfterClass");
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		System.out.println("Executed Before test : Setup");
+		//setup driver
+		//
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		System.out.println("Executed After test : tearDown");
+		//
+	}
+
+	@Test
+	public void test1() {
+		//write everything you want to test here.
+		System.out.println("Executing Test1");
+		fail("TEST 1: Not yet implemented");
+	}
+	
+	@Test
+	public void test2() {
+		System.out.println("Executing Test2");
+		//write everything you want to test here.
+		fail("TEST 2: Not yet implemented");
+	}
+
+}

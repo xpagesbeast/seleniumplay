@@ -1,0 +1,26 @@
+package com.xpagesbeast.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByXPath;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TestSuite {
+
+	public static void main(String[] args) {
+		WebDriver driver;
+		System.setProperty("webdriver.gecko.driver", "/webdrivers/geckodriver.exe");
+		//"webdriver.chrome.driver"
+		//"webdriver.ie.driver"
+        driver = new FirefoxDriver();
+        String baseURL = "http://www.google.com";
+        driver.get(baseURL);	
+        
+        String searchElementXPath = "/html/body/div/div[3]/form/div[2]/div[1]/div[1]/div/div[1]/input";
+        String searchElementById = "lst-ib";
+        
+        driver.findElement(By.id(searchElementById)).sendKeys("XPages Rocks!");
+        
+	}
+
+}
