@@ -10,7 +10,8 @@ public class TestSuite {
 
 	public static void main(String[] args) {
 		WebDriver driver;
-		System.setProperty("webdriver.gecko.driver", "/webdrivers/geckodriver.exe");
+		//System.setProperty("webdriver.gecko.driver", "/webdrivers/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "/home/slobodan/libraries/geckodriver");
 		//"webdriver.chrome.driver"
 		//"webdriver.ie.driver"
         driver = new FirefoxDriver();
